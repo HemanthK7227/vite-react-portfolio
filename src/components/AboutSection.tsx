@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
           {/* Left Column */}
           <div className="order-2 lg:order-1">
             <p className="text-base leading-relaxed text-gray-800 mb-6">
-              I’m a data analyst professional with over three years of experience turning data into actionable business insights.
+              I’m a data science professional with over four years of experience turning data into actionable business insights.
               My work includes solving complex use cases such as customer retention analysis, sales forecasting, and marketing optimization—
               empowering organizations to make data-backed decisions and drive growth.
               Outside of my professional work, I stay engaged with the latest trends in AI and machine learning, contributing to open-source projects
@@ -52,12 +52,14 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
 
+            {/* Resume Download Button */}
             <a
-              href="https://drive.google.com/file/d/1Gx1H5yGWEWmMtZTjuCJPUn9GXwXBFiNS/view?usp=sharing"
+              href="https://drive.google.com/uc?export=download&id=1Gx1H5yGWEWmMtZTjuCJPUn9GXwXBFiNS"
               className="mt-8 inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
             >
               Download Resume
             </a>
+
           </div>
 
           {/* Right Column - Professional Journey */}
@@ -71,7 +73,7 @@ const AboutSection: React.FC = () => {
                   <article>
                     <div className="flex justify-between mb-2">
                       <strong className="text-gray-700 font-bold">Learning Technology and Media Assistant</strong>
-                      <span className="text-sm text-gray-500">2023 - 2024</span>
+                      <span className="text-sm text-gray-500">08/2023 - 12/2024</span>
                     </div>
                     <p className="text-gray-600 font-bold">Mercer University</p>
                     <p className="text-gray-500">Assisting in various learning technologies for faculty and students, focusing on improving educational experiences and increasing engagement with media tools.</p>
@@ -79,19 +81,19 @@ const AboutSection: React.FC = () => {
 
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Data Analyst</strong>
-                      <span className="text-sm text-gray-500">2018 - 2020</span>
+                      <strong className="text-gray-700 font-bold">Python Full Stack Data Engineer - Intern </strong>
+                      <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
                     </div>
-                    <p className="text-gray-600 font-bold">Epam Systems</p>
+                    <p className="text-gray-600 font-bold">Flyers soft</p>
                     <p className="text-gray-500">Developed data-driven insights to inform decision-making in marketing and customer retention, providing analysis using Python and SQL for business solutions.</p>
                   </article>
 
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Intern Data Analyst</strong>
-                      <span className="text-sm text-gray-500">2017 - 2018</span>
+                      <strong className="text-gray-700 font-bold">Data Analyst</strong>
+                      <span className="text-sm text-gray-500">05/2017 - 01/2020</span>
                     </div>
-                    <p className="text-gray-600 font-bold">Flyers Soft</p>
+                    <p className="text-gray-600 font-bold">EPAM Systems</p>
                     <p className="text-gray-500">Worked on market trend analysis, sales forecasting, and customer segmentation to drive the company's growth strategy, delivering reports for executive leadership.</p>
                   </article>
                 </div>
