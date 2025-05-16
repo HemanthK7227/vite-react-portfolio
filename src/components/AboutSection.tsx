@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
                   <Award className="text-indigo-600 mr-2" size={20} />
                   <h3 className="font-semibold text-gray-900">Experience</h3>
                 </div>
-                <p className="text-gray-700">3+ Years</p>
+                <p className="text-gray-700">5+ Years</p>
               </div>
 
               <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform hover:scale-105 hover:shadow-md">
@@ -54,12 +54,11 @@ const AboutSection: React.FC = () => {
 
             {/* Resume Download Button */}
             <a
-              href="https://drive.google.com/uc?export=download&id=1Gx1H5yGWEWmMtZTjuCJPUn9GXwXBFiNS"
+              href="https://drive.google.com/uc?export=download&id=1Ud3P2rCncgBG3gnZzv0K7RwKezoWra8g"
               className="mt-8 inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
             >
               Download Resume
             </a>
-
           </div>
 
           {/* Right Column - Professional Journey */}
@@ -81,10 +80,10 @@ const AboutSection: React.FC = () => {
 
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Python Full Stack Data Engineer - Intern </strong>
+                      <strong className="text-gray-700 font-bold">Python Full Stack Data Engineer - Intern</strong>
                       <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
                     </div>
-                    <p className="text-gray-600 font-bold">Flyers soft</p>
+                    <p className="text-gray-600 font-bold">Flyers Soft</p>
                     <p className="text-gray-500">Developed data-driven insights to inform decision-making in marketing and customer retention, providing analysis using Python and SQL for business solutions.</p>
                   </article>
 

@@ -97,7 +97,7 @@ const ProjectsSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Sample Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Research Projects</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A selection of my recent data science projects, showcasing my expertise in machine learning, data analysis, and visualization.
