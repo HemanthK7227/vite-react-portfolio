@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <div className="mb-4 inline-block">
               <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
-                Data Science Professional
+              Software Development Engineer | Machine Learning & Data Analytics Enthusiast
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -29,8 +29,7 @@ const HeroSection: React.FC = () => {
             </h1>
 
             <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              I'm a Professional Data Scientist and Analyst, I specialized in machine learning, predictive modeling, and statistical analysis. My expertise includes predictive modeling, statistical analysis, and data visualization, helping to transform complex data into actionable insights that drive informed decision-making. I am passionate about leveraging data to solve real-world problems and deliver impactful solutions.
-
+            I'm a Software Development Engineer with a strong focus on full-stack development, machine learning, and data analytics. I specialize in building scalable applications using Java, Spring Boot, and React.js, while also developing data-driven solutions through predictive modeling and statistical analysis. My work transforms complex data into actionable insights, enabling smarter decisions and real-world impact. I'm passionate about combining software engineering and AI to solve meaningful problems and deliver high-impact solutions.
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
@@ -90,7 +89,7 @@ const HeroSection: React.FC = () => {
               />
               <div className="p-4 text-center">
                 <h3 className="text-xl font-bold text-gray-800">Hemanth Kothapalli</h3>
-                <p className="text-sm text-gray-500 mt-1">Data Science Professional</p>
+                <p className="text-sm text-gray-500 mt-1">Software Development Engineer</p>
               </div>
             </div>
           </div>

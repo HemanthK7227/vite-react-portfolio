@@ -48,7 +48,7 @@ const ContactSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Have a project in mind or want to discuss a data science opportunity? Feel free to reach out and I'll respond promptly.
+            Have a project in mind or want to discuss a opportunity? Feel free to reach out and I'll respond promptly.
           </p>
         </div>
 

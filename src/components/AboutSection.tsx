@@ -10,19 +10,31 @@ const AboutSection: React.FC = () => {
           <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 max-w-2xl">
             <p className="text-base leading-relaxed text-gray-800 mb-6">
-              I’m a data science professional with over four years of experience turning data into actionable business insights.
-              My work includes solving complex use cases such as customer retention analysis, sales forecasting, and marketing optimization—
-              empowering organizations to make data-backed decisions and drive growth.
-              Outside of my professional work, I stay engaged with the latest trends in AI and machine learning, contributing to open-source projects
-              and continually refining my skill set.
+              I am a results-driven Software Development Engineer with expertise in full-stack application development, 
+              machine learning, and data analytics. I specialize in building scalable, high-performance web applications
+              using Java, Spring Boot, and React.js, while also developing data-driven solutions through predictive modeling
+              and statistical analysis.
+            </p>
+
+            <p className="text-base leading-relaxed text-gray-800 mb-6">
+              My skill set bridges software engineering and AI, with hands-on experience in microservices architecture, 
+              RESTful API development, SQL/NoSQL databases, and cloud deployment using Docker, Kubernetes, and AWS. 
+              I bring added value through data analysis using Python (pandas, scikit-learn, matplotlib) and visualization tools 
+              like Power BI and Tableau.
+            </p>
+
+            <p className="text-base leading-relaxed text-gray-800 mb-6">
+              Passionate about solving real-world problems through clean code and smart data, I’ve delivered projects ranging 
+              from ML-powered churn prediction systems to interactive dashboards and secure e-commerce platforms. 
+              I continuously seek to learn, adapt, and innovate in both engineering and data domains.
             </p>
 
             <blockquote className="italic text-indigo-700 mt-4">
-              "Data should drive decisions, not assumptions."
+              "Engineering intelligent solutions at the intersection of software and data."
             </blockquote>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
@@ -31,7 +43,7 @@ const AboutSection: React.FC = () => {
                   <Award className="text-indigo-600 mr-2" size={20} />
                   <h3 className="font-semibold text-gray-900">Experience</h3>
                 </div>
-                <p className="text-gray-700">5+ Years</p>
+                <p className="text-gray-700">3+ Years</p>
               </div>
 
               <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform hover:scale-105 hover:shadow-md">
@@ -52,7 +64,6 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Resume Download Button */}
             <a
               href="https://drive.google.com/uc?export=download&id=1Ud3P2rCncgBG3gnZzv0K7RwKezoWra8g"
               className="mt-8 inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
@@ -62,40 +73,46 @@ const AboutSection: React.FC = () => {
           </div>
 
           {/* Right Column - Professional Journey */}
-          <div className="order-1 lg:order-2 mt-12 lg:mt-0 lg:w-full xl:w-full 2xl:w-full">
+          <div className="order-1 lg:order-2 mt-12 lg:mt-0 lg:w-full">
             <div className="relative">
               <div className="absolute -inset-6 bg-indigo-100 rounded-xl transform -rotate-6"></div>
-              <div className="relative bg-white p-24 rounded-lg shadow-lg z-10">
+              <div className="relative bg-white p-6 md:p-10 lg:p-12 xl:p-16 rounded-lg shadow-lg z-10">
                 <h3 className="text-2xl font-bold mb-6 text-gray-800">Professional Journey</h3>
 
                 <div className="space-y-8">
-                  <article>
-                    <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Learning Technology and Media Assistant</strong>
-                      <span className="text-sm text-gray-500">08/2023 - 12/2024</span>
-                    </div>
-                    <p className="text-gray-600 font-bold">Mercer University</p>
-                    <p className="text-gray-500">Assisting in various learning technologies for faculty and students, focusing on improving educational experiences and increasing engagement with media tools.</p>
-                  </article>
+  <article>
+    <div className="flex justify-between mb-2">
+      <strong className="text-gray-700 font-bold">Data Analyst Intern</strong>
+      <span className="text-sm text-gray-500">02/2025 - 05/2025</span>
+    </div>
+    <p className="text-sm text-gray-500">Zangle Technologies</p>
+  </article>
 
-                  <article>
-                    <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Python Full Stack Data Engineer - Intern</strong>
-                      <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
-                    </div>
-                    <p className="text-gray-600 font-bold">Flyers Soft</p>
-                    <p className="text-gray-500">Developed data-driven insights to inform decision-making in marketing and customer retention, providing analysis using Python and SQL for business solutions.</p>
-                  </article>
+  <article>
+    <div className="flex justify-between mb-2">
+      <strong className="text-gray-700 font-bold">Learning Technology and Media Assistant</strong>
+      <span className="text-sm text-gray-500">08/2023 - 12/2024</span>
+    </div>
+    <p className="text-sm text-gray-500">Mercer University</p>
+  </article>
 
-                  <article>
-                    <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Data Analyst</strong>
-                      <span className="text-sm text-gray-500">05/2017 - 01/2020</span>
-                    </div>
-                    <p className="text-gray-600 font-bold">EPAM Systems</p>
-                    <p className="text-gray-500">Worked on market trend analysis, sales forecasting, and customer segmentation to drive the company's growth strategy, delivering reports for executive leadership.</p>
-                  </article>
-                </div>
+  <article>
+    <div className="flex justify-between mb-2">
+      <strong className="text-gray-700 font-bold">MEAN Stack Developer - Intern</strong>
+      <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
+    </div>
+    <p className="text-sm text-gray-500">Flyers Soft</p>
+  </article>
+
+  <article>
+    <div className="flex justify-between mb-2">
+      <strong className="text-gray-700 font-bold">Junior Software Engineer</strong>
+      <span className="text-sm text-gray-500">04/2017 - 12/2019</span>
+    </div>
+    <p className="text-sm text-gray-500">EPAM Systems</p>
+  </article>
+</div>
+
               </div>
             </div>
           </div>

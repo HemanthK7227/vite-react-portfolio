@@ -1,13 +1,16 @@
 import React, { useRef } from 'react';
 import {
-  BarChart3,
-  BrainCircuit,
+  Code,
+  Server,
+  Monitor,
+  Brain,
+  BarChart,
   Database,
-  FileCode,
-  Terminal,
-  TrendingUp
+  Cloud,
+  Wrench,
+  TestTube,
 } from 'lucide-react';
-import { motion, useInView } from 'framer-motion';
+import { useInView } from 'framer-motion';
 
 interface SkillCategoryProps {
   icon: React.ReactNode;
@@ -16,9 +19,14 @@ interface SkillCategoryProps {
   color: string;
 }
 
-const SkillCategory: React.FC<SkillCategoryProps> = ({ icon, title, skills, color }) => (
+const SkillCategory: React.FC<SkillCategoryProps> = ({
+  icon,
+  title,
+  skills,
+  color,
+}) => (
   <div
-    className={`bg-white rounded-xl shadow-md overflow-hidden border-t-4 ${color} hover:shadow-lg transition-shadow duration-300`}
+    className={`bg-white rounded-xl shadow-sm hover:shadow-lg border-t-4 ${color} transition-shadow duration-300`}
     role="region"
     aria-label={`${title} skills`}
   >
@@ -27,11 +35,11 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ icon, title, skills, colo
         <div className="mr-3 text-indigo-600">{icon}</div>
         <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
       </div>
-      <ul className="space-y-2 list-none">
+      <ul className="space-y-2 list-none text-sm text-gray-700">
         {skills.map((skill, index) => (
           <li key={`${title}-${index}`} className="flex items-center">
             <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2" />
-            <span className="text-gray-700">{skill}</span>
+            <span>{skill}</span>
           </li>
         ))}
       </ul>
@@ -42,53 +50,116 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ icon, title, skills, colo
 const SkillsSection: React.FC = () => {
   const skillCategories = [
     {
-      icon: <BrainCircuit size={24} />,
-      title: 'Machine Learning',
-      color: 'border-indigo-600',
-      skills: ['Supervised Learning', 'Unsupervised Learning', 'Deep Learning']
+      icon: <Code size={24} />,
+      title: 'Programming Languages',
+      color: 'border-pink-600',
+      skills: ['Python', 'Java', 'JavaScript', 'SQL', 'R'],
     },
     {
-      icon: <BarChart3 size={24} />,
-      title: 'Data Visualization',
+      icon: <Server size={24} />,
+      title: 'Back-End Development',
+      color: 'border-blue-600',
+      skills: [
+        'Spring Boot',
+        'Spring MVC',
+        'Hibernate',
+        'JPA',
+        'Spring Security',
+        'Maven',
+        'Gradle',
+      ],
+    },
+    {
+      icon: <Monitor size={24} />,
+      title: 'Front-End Development',
+      color: 'border-yellow-600',
+      skills: ['React.js', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Bootstrap'],
+    },
+    {
+      icon: <Brain size={24} />,
+      title: 'Data Science & Machine Learning',
       color: 'border-purple-600',
-      skills: ['Tableau', 'PowerBI', 'Matplotlib', 'Seaborn']
+      skills: [
+        'Supervised Learning',
+        'Unsupervised Learning',
+        'Deep Learning',
+        'scikit-learn',
+        'TensorFlow',
+        'PyTorch',
+        'pandas',
+        'NumPy',
+        'MLflow',
+        'Cross-validation',
+      ],
+    },
+    {
+      icon: <BarChart size={24} />,
+      title: 'Data Visualization & Reporting',
+      color: 'border-indigo-600',
+      skills: ['Matplotlib', 'Seaborn', 'Plotly', 'Power BI', 'Tableau'],
     },
     {
       icon: <Database size={24} />,
       title: 'Data Management',
-      color: 'border-blue-600',
-      skills: ['SQL', 'NoSQL', 'Data Warehousing', 'ETL Pipelines', 'Big Data']
-    },
-    {
-      icon: <FileCode size={24} />,
-      title: 'Programming',
-      color: 'border-pink-600',
-      skills: ['Python', 'R', 'SQL', 'Java', 'JavaScript']
-    },
-    {
-      icon: <Terminal size={24} />,
-      title: 'Tools & Frameworks',
       color: 'border-green-600',
-      skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'Numpy']
+      skills: [
+        'MySQL',
+        'PostgreSQL',
+        'MongoDB',
+        'Airflow',
+        'ETL Pipelines',
+        'Data Modeling',
+        'RESTful APIs',
+        'AWS RDS',
+        'S3',
+      ],
     },
     {
-      icon: <TrendingUp size={24} />,
+      icon: <TestTube size={24} />,
       title: 'Statistical Analysis',
-      color: 'border-yellow-600',
-      skills: ['Hypothesis Testing', 'Regression', 'Time Series', 'A/B Testing', 'Experimental Design']
-    }
-  ];
-
-  const proficiencyData = [
-    { name: 'Python', percentage: 95 },
-    { name: 'Machine Learning', percentage: 90 },
-    { name: 'Statistical Analysis', percentage: 85 },
-    { name: 'Data Visualization', percentage: 88 },
-    { name: 'SQL & Databases', percentage: 90 }
+      color: 'border-amber-500',
+      skills: [
+        'Hypothesis Testing',
+        'Regression Analysis',
+        'Time Series Forecasting',
+        'A/B Testing',
+        'Experimental Design',
+      ],
+    },
+    {
+      icon: <Cloud size={24} />,
+      title: 'DevOps & Cloud',
+      color: 'border-cyan-600',
+      skills: [
+        'Git',
+        'GitHub',
+        'Jenkins',
+        'Docker',
+        'Kubernetes',
+        'AWS (EC2, S3, RDS, SageMaker)',
+        'Azure (App Services, ML)',
+      ],
+    },
+    {
+      icon: <Wrench size={24} />,
+      title: 'Tools',
+      color: 'border-gray-600',
+      skills: [
+        'VS Code',
+        'IntelliJ IDEA',
+        'Jupyter Notebook',
+        'Postman',
+        'Excel',
+        'MySQL Workbench',
+        'GitHub',
+        'AWS Console',
+        'Azure Portal',
+      ],
+    },
   ];
 
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-100px' });
+  useInView(ref, { once: true, margin: '-100px' });
 
   return (
     <section id="skills" className="py-20 bg-gray-50">
@@ -98,7 +169,8 @@ const SkillsSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            My technical toolkit encompasses a wide range of data science skills, from statistical analysis to machine learning and data visualization.
+            My technical toolkit encompasses a wide range of software engineering and data science skills,
+            from application development to machine learning, DevOps, and cloud solutions.
           </p>
         </div>
 
@@ -113,33 +185,6 @@ const SkillsSection: React.FC = () => {
               color={category.color}
             />
           ))}
-        </div>
-
-        {/* Proficiency Bars */}
-        <div className="mt-16 bg-white rounded-xl shadow-md p-8" ref={ref}>
-          <h3 className="text-2xl font-semibold mb-6 text-center">Proficiency Levels</h3>
-          <div className="space-y-6 max-w-3xl mx-auto">
-            {proficiencyData.map((skill, index) => (
-              <div key={`progress-${index}`}>
-                <div className="flex justify-between mb-2">
-                  <span className="text-gray-700 font-medium">{skill.name}</span>
-                  <span className="text-gray-500">{skill.percentage}%</span>
-                </div>
-                <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: `${skill.percentage}%` } : {}}
-                    transition={{ duration: 1.2, ease: 'easeOut' }}
-                    aria-valuenow={skill.percentage}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                    role="progressbar"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
