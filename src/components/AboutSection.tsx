@@ -65,7 +65,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <a
-              href="https://drive.google.com/uc?export=download&id=1Ud3P2rCncgBG3gnZzv0K7RwKezoWra8g"
+              href="https://drive.google.com/uc?export=download&id=1ONv1CT6yDxXvVFoLv4bRaRcmsoI2kPGU"
               className="mt-8 inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
             >
               Download Resume
@@ -80,38 +80,38 @@ const AboutSection: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-6 text-gray-800">Professional Journey</h3>
 
                 <div className="space-y-8">
-  <article>
-    <div className="flex justify-between mb-2">
-      <strong className="text-gray-700 font-bold">Data Analyst Intern</strong>
-      <span className="text-sm text-gray-500">02/2025 - 05/2025</span>
-    </div>
-    <p className="text-sm text-gray-500">Zangle Technologies</p>
-  </article>
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">Data Analyst Intern</strong>
+                      <span className="text-sm text-gray-500">02/2025 - 05/2025</span>
+                    </div>
+                    <p className="text-sm text-gray-500">Zangle Technologies</p>
+                  </article>
 
-  <article>
-    <div className="flex justify-between mb-2">
-      <strong className="text-gray-700 font-bold">Learning Technology and Media Assistant</strong>
-      <span className="text-sm text-gray-500">08/2023 - 12/2024</span>
-    </div>
-    <p className="text-sm text-gray-500">Mercer University</p>
-  </article>
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">Learning Technology and Media Assistant</strong>
+                      <span className="text-sm text-gray-500">08/2023 - 12/2024</span>
+                    </div>
+                    <p className="text-sm text-gray-500">Mercer University</p>
+                  </article>
 
-  <article>
-    <div className="flex justify-between mb-2">
-      <strong className="text-gray-700 font-bold">MEAN Stack Developer - Intern</strong>
-      <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
-    </div>
-    <p className="text-sm text-gray-500">Flyers Soft</p>
-  </article>
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">MEAN Stack Developer - Intern</strong>
+                      <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
+                    </div>
+                    <p className="text-sm text-gray-500">Flyers Soft</p>
+                  </article>
 
-  <article>
-    <div className="flex justify-between mb-2">
-      <strong className="text-gray-700 font-bold">Junior Software Engineer</strong>
-      <span className="text-sm text-gray-500">04/2017 - 12/2019</span>
-    </div>
-    <p className="text-sm text-gray-500">EPAM Systems</p>
-  </article>
-</div>
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">Junior Software Engineer</strong>
+                      <span className="text-sm text-gray-500">04/2017 - 12/2019</span>
+                    </div>
+                    <p className="text-sm text-gray-500">EPAM Systems</p>
+                  </article>
+                </div>
 
               </div>
             </div>
