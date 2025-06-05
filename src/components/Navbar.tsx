@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                href={"https://drive.google.com/file/d/1ONv1CT6yDxXvVFoLv4bRaRcmsoI2kPGU/view?usp=sharing"}
+                href={"https://drive.google.com/file/d/1C4zdMzxKWNxEq0R3cR6V4Ce2zwTFRPZX/view?usp=sharing"}
                 className="flex items-center gap-1 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200"
               >
                 <FileText size={16} />

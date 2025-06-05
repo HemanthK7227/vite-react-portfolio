@@ -65,7 +65,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <a
-              href="https://drive.google.com/uc?export=download&id=1ONv1CT6yDxXvVFoLv4bRaRcmsoI2kPGU"
+              href="https://drive.google.com/uc?export=download&id=1C4zdMzxKWNxEq0R3cR6V4Ce2zwTFRPZX"
               className="mt-8 inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
             >
               Download Resume
