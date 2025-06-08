@@ -14,23 +14,20 @@ const AboutSection: React.FC = () => {
           {/* Left Column */}
           <div className="order-2 lg:order-1 max-w-2xl">
             <p className="text-base leading-relaxed text-gray-800 mb-6">
-              I am a results-driven Software Development Engineer with expertise in full-stack application development, 
-              machine learning, and data analytics. I specialize in building scalable, high-performance web applications
-              using Java, Spring Boot, and React.js, while also developing data-driven solutions through predictive modeling
-              and statistical analysis.
+              I am an AI & Machine Learning Engineer with a strong foundation in data science, model development, and 
+              full-stack ML system deployment. With experience in supervised and unsupervised learning, deep learning, 
+              and MLOps, I specialize in building scalable, end-to-end machine learning pipelines that deliver business value.
+
             </p>
 
             <p className="text-base leading-relaxed text-gray-800 mb-6">
-              My skill set bridges software engineering and AI, with hands-on experience in microservices architecture, 
-              RESTful API development, SQL/NoSQL databases, and cloud deployment using Docker, Kubernetes, and AWS. 
-              I bring added value through data analysis using Python (pandas, scikit-learn, matplotlib) and visualization tools 
-              like Power BI and Tableau.
+              I have a passion for turning raw data into actionable insights using tools like Python, TensorFlow, PyTorch, and 
+              cloud platforms like AWS 
             </p>
 
             <p className="text-base leading-relaxed text-gray-800 mb-6">
-              Passionate about solving real-world problems through clean code and smart data, I’ve delivered projects ranging 
-              from ML-powered churn prediction systems to interactive dashboards and secure e-commerce platforms. 
-              I continuously seek to learn, adapt, and innovate in both engineering and data domains.
+              My expertise spans data preprocessing, feature engineering, model training, hyperparameter tuning, and deployment 
+              using APIs and containerized services. I thrive in cross-functional teams and enjoy solving real-world problems with AI.
             </p>
 
             <blockquote className="italic text-indigo-700 mt-4">
@@ -82,7 +79,7 @@ const AboutSection: React.FC = () => {
                 <div className="space-y-8">
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Data Analyst Intern</strong>
+                      <strong className="text-gray-700 font-bold">Data Science Intern</strong>
                       <span className="text-sm text-gray-500">02/2025 - 05/2025</span>
                     </div>
                     <p className="text-sm text-gray-500">Zangle Technologies</p>
@@ -98,7 +95,7 @@ const AboutSection: React.FC = () => {
 
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">MEAN Stack Developer - Intern</strong>
+                      <strong className="text-gray-700 font-bold">Junior Software Engineer - Intern</strong>
                       <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
                     </div>
                     <p className="text-sm text-gray-500">Flyers Soft</p>
@@ -106,7 +103,7 @@ const AboutSection: React.FC = () => {
 
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Junior Software Engineer</strong>
+                      <strong className="text-gray-700 font-bold">Junior Data Scientist</strong>
                       <span className="text-sm text-gray-500">04/2017 - 12/2019</span>
                     </div>
                     <p className="text-sm text-gray-500">EPAM Systems</p>
