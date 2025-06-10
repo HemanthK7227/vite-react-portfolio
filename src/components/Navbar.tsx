@@ -1,122 +1,122 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, FileText, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+import { Award, GraduationCap, Briefcase } from 'lucide-react';
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+const AboutSection: React.FC = () => {
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Hemanth<span className="font-light"> Kothapalli</span>
+    <section id="about" className="py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">About Me</h2>
+          <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left Column */}
+          <div className="order-2 lg:order-1 max-w-2xl">
+            <p className="text-base leading-relaxed text-gray-800 mb-6">
+              I am an AI & Machine Learning Engineer with a strong foundation in data science, model development, and 
+              full-stack ML system deployment. With experience in supervised and unsupervised learning, deep learning, 
+              and MLOps, I specialize in building scalable, end-to-end machine learning pipelines that deliver business value.
+
+            </p>
+
+            <p className="text-base leading-relaxed text-gray-800 mb-6">
+              I have a passion for turning raw data into actionable insights using tools like Python, TensorFlow, PyTorch, and 
+              cloud platforms like AWS 
+            </p>
+
+            <p className="text-base leading-relaxed text-gray-800 mb-6">
+              My expertise spans data preprocessing, feature engineering, model training, hyperparameter tuning, and deployment 
+              using APIs and containerized services. I thrive in cross-functional teams and enjoy solving real-world problems with AI.
+            </p>
+
+            <blockquote className="italic text-indigo-700 mt-4">
+              "Engineering intelligent solutions at the intersection of software and data."
+            </blockquote>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform hover:scale-105 hover:shadow-md">
+                <div className="flex items-center mb-2">
+                  <Award className="text-indigo-600 mr-2" size={20} />
+                  <h3 className="font-semibold text-gray-900">Experience</h3>
+                </div>
+                <p className="text-gray-700">3+ Years</p>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform hover:scale-105 hover:shadow-md">
+                <div className="flex items-center mb-2">
+                  <Briefcase className="text-indigo-600 mr-2" size={20} />
+                  <h3 className="font-semibold text-gray-900">Projects</h3>
+                </div>
+                <p className="text-gray-700">10+ Completed</p>
+              </div>
+
+              <div className="bg-gray-50 p-8 rounded-lg shadow-sm transition-transform hover:scale-105 hover:shadow-md">
+                <div className="flex items-center mb-2">
+                  <GraduationCap className="text-indigo-600 mr-2" size={20} />
+                  <h3 className="font-semibold text-gray-900">Education</h3>
+                </div>
+                <p className="text-gray-700">M.S. Business Analytics</p>
+                <p className="text-gray-700">M.S. Advanced Computer Science</p>
+              </div>
+            </div>
+
+            <a
+              href="https://drive.google.com/file/d/1bTRc1UOS4eI1Ca7lehDV0S89SzR7zhRD/view?usp=sharing"
+              className="mt-8 inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
+            >
+              Download Resume
             </a>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
-              {['about', 'skills', 'projects', 'contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item}`}
-                  className="text-gray-700 hover:text-indigo-600 transition-colors duration-200"
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </a>
-              ))}
-              <a
-                href={"https://drive.google.com/file/d/1C4zdMzxKWNxEq0R3cR6V4Ce2zwTFRPZX/view?usp=sharing"}
-                className="flex items-center gap-1 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200"
-              >
-                <FileText size={16} />
-                Resume
-              </a>
+          {/* Right Column - Professional Journey */}
+          <div className="order-1 lg:order-2 mt-12 lg:mt-0 lg:w-full">
+            <div className="relative">
+              <div className="absolute -inset-6 bg-indigo-100 rounded-xl transform -rotate-6"></div>
+              <div className="relative bg-white p-6 md:p-10 lg:p-12 xl:p-16 rounded-lg shadow-lg z-10">
+                <h3 className="text-2xl font-bold mb-6 text-gray-800">Professional Journey</h3>
+
+                <div className="space-y-8">
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">ML Engineer</strong>
+                      <span className="text-sm text-gray-500">02/2025 - 06/2025</span>
+                    </div>
+                    <p className="text-sm text-gray-500">Zangle Technologies</p>
+                  </article>
+
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">Learning Technology and Media Assistant</strong>
+                      <span className="text-sm text-gray-500">08/2023 - 12/2024</span>
+                    </div>
+                    <p className="text-sm text-gray-500">Mercer University</p>
+                  </article>
+
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">Data Scientist - Intern</strong>
+                      <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
+                    </div>
+                    <p className="text-sm text-gray-500">Flyers Soft</p>
+                  </article>
+
+                  <article>
+                    <div className="flex justify-between mb-2">
+                      <strong className="text-gray-700 font-bold">Junior Software Engineer</strong>
+                      <span className="text-sm text-gray-500">04/2017 - 12/2019</span>
+                    </div>
+                    <p className="text-sm text-gray-500">EPAM Systems</p>
+                  </article>
+                </div>
+
+              </div>
             </div>
           </div>
-
-          {/* Mobile Toggle */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-              aria-expanded={isOpen}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 focus:outline-none"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-4 pt-2 pb-4 space-y-1 bg-white shadow-lg rounded-b-lg">
-          {['about', 'skills', 'projects',  'contact'].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
-            </a>
-          ))}
-          <a
-            href="/resume.pdf"
-            className="flex items-center gap-1 px-3 py-2 text-base font-medium text-indigo-600"
-            onClick={() => setIsOpen(false)}
-          >
-            <FileText size={16} />
-            Resume
-          </a>
-
-          {/* Socials */}
-          <div className="pt-4 flex justify-center space-x-6 border-t border-gray-200 mt-4">
-            <a
-              href="https://github.com/HemanthK7227"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="text-gray-500 hover:text-gray-700 transition"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/hemanth-k-027457190/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="text-gray-500 hover:text-gray-700 transition"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="https://x.com/imhemanth_kk"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="text-gray-500 hover:text-gray-700 transition"
-            >
-              <Twitter size={20} />
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    </section>
   );
 };
 
-export default Navbar;
+export default AboutSection;

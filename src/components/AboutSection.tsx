@@ -62,7 +62,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <a
-              href="https://drive.google.com/uc?export=download&id=1C4zdMzxKWNxEq0R3cR6V4Ce2zwTFRPZX"
+              href="https://drive.google.com/file/d/1bTRc1UOS4eI1Ca7lehDV0S89SzR7zhRD/view?usp=sharing"
               className="mt-8 inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg shadow hover:bg-indigo-700 transition"
             >
               Download Resume
@@ -79,8 +79,8 @@ const AboutSection: React.FC = () => {
                 <div className="space-y-8">
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Data Science Intern</strong>
-                      <span className="text-sm text-gray-500">02/2025 - 05/2025</span>
+                      <strong className="text-gray-700 font-bold">ML Engineer</strong>
+                      <span className="text-sm text-gray-500">02/2025 - 06/2025</span>
                     </div>
                     <p className="text-sm text-gray-500">Zangle Technologies</p>
                   </article>
@@ -95,7 +95,7 @@ const AboutSection: React.FC = () => {
 
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Junior Software Engineer - Intern</strong>
+                      <strong className="text-gray-700 font-bold">Data Scientist - Intern</strong>
                       <span className="text-sm text-gray-500">03/2021 - 09/2021</span>
                     </div>
                     <p className="text-sm text-gray-500">Flyers Soft</p>
@@ -103,7 +103,7 @@ const AboutSection: React.FC = () => {
 
                   <article>
                     <div className="flex justify-between mb-2">
-                      <strong className="text-gray-700 font-bold">Junior Data Scientist</strong>
+                      <strong className="text-gray-700 font-bold">Junior Software Engineer</strong>
                       <span className="text-sm text-gray-500">04/2017 - 12/2019</span>
                     </div>
                     <p className="text-sm text-gray-500">EPAM Systems</p>

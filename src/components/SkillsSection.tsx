@@ -1,8 +1,6 @@
 import React, { useRef } from 'react';
 import {
   Code,
-  Server,
-  Monitor,
   Brain,
   BarChart,
   Database,
@@ -48,115 +46,113 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({
 );
 
 const SkillsSection: React.FC = () => {
-  const skillCategories = [
-    {
-      icon: <Code size={24} />,
-      title: 'Programming Languages',
-      color: 'border-pink-600',
-      skills: ['Python', 'Java', 'JavaScript', 'SQL', 'R'],
-    },
-    {
-      icon: <Server size={24} />,
-      title: 'Back-End Development',
-      color: 'border-blue-600',
-      skills: [
-        'Spring Boot',
-        'Spring MVC',
-        'Hibernate',
-        'JPA',
-        'Spring Security',
-        'Maven',
-        'Gradle',
-      ],
-    },
-    {
-      icon: <Monitor size={24} />,
-      title: 'Front-End Development',
-      color: 'border-yellow-600',
-      skills: ['React.js', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Bootstrap'],
-    },
-    {
-      icon: <Brain size={24} />,
-      title: 'Data Science & Machine Learning',
-      color: 'border-purple-600',
-      skills: [
-        'Supervised Learning',
-        'Unsupervised Learning',
-        'Deep Learning',
-        'scikit-learn',
-        'TensorFlow',
-        'PyTorch',
-        'pandas',
-        'NumPy',
-        'MLflow',
-        'Cross-validation',
-      ],
-    },
-    {
-      icon: <BarChart size={24} />,
-      title: 'Data Visualization & Reporting',
-      color: 'border-indigo-600',
-      skills: ['Matplotlib', 'Seaborn', 'Plotly', 'Power BI', 'Tableau'],
-    },
-    {
-      icon: <Database size={24} />,
-      title: 'Data Management',
-      color: 'border-green-600',
-      skills: [
-        'MySQL',
-        'PostgreSQL',
-        'MongoDB',
-        'Airflow',
-        'ETL Pipelines',
-        'Data Modeling',
-        'RESTful APIs',
-        'AWS RDS',
-        'S3',
-      ],
-    },
-    {
-      icon: <TestTube size={24} />,
-      title: 'Statistical Analysis',
-      color: 'border-amber-500',
-      skills: [
-        'Hypothesis Testing',
-        'Regression Analysis',
-        'Time Series Forecasting',
-        'A/B Testing',
-        'Experimental Design',
-      ],
-    },
-    {
-      icon: <Cloud size={24} />,
-      title: 'DevOps & Cloud',
-      color: 'border-cyan-600',
-      skills: [
-        'Git',
-        'GitHub',
-        'Jenkins',
-        'Docker',
-        'Kubernetes',
-        'AWS (EC2, S3, RDS, SageMaker)',
-        'Azure (App Services, ML)',
-      ],
-    },
-    {
-      icon: <Wrench size={24} />,
-      title: 'Tools',
-      color: 'border-gray-600',
-      skills: [
-        'VS Code',
-        'IntelliJ IDEA',
-        'Jupyter Notebook',
-        'Postman',
-        'Excel',
-        'MySQL Workbench',
-        'GitHub',
-        'AWS Console',
-        'Azure Portal',
-      ],
-    },
-  ];
+const skillCategories = [
+  {
+    icon: <Code size={24} />,
+    title: 'Programming Languages',
+    color: 'border-pink-600',
+    skills: ['Python', 'R', 'SQL'],
+  },
+  {
+    icon: <Brain size={24} />,
+    title: 'Machine Learning & AI',
+    color: 'border-purple-600',
+    skills: [
+      'Supervised Learning',
+      'Unsupervised Learning',
+      'Deep Learning',
+      'NLP (Transformers, BERT)',
+      'Computer Vision (CNN, YOLO)',
+      'Model Evaluation & Cross-Validation',
+      'Transfer Learning',
+      'ML Pipelines',
+    ],
+  },
+  {
+    icon: <Brain size={24} />,
+    title: 'Generative AI & LLMs',
+    color: 'border-fuchsia-600',
+    skills: [
+      'Prompt Engineering',
+      'Large Language Models (LLMs)',
+      'GPT (3.5, 4.0)',
+      'LangChain',
+      'RAG (Retrieval Augmented Generation)',
+      'Fine-tuning LLMs',
+      'Hugging Face Transformers',
+      'OpenAI API',
+      'Chatbot Development',
+    ],
+  },
+  {
+    icon: <BarChart size={24} />,
+    title: 'Data Science & Visualization',
+    color: 'border-indigo-600',
+    skills: [
+      'Pandas',
+      'NumPy',
+      'scikit-learn',
+      'Matplotlib',
+      'Seaborn',
+      'Plotly',
+      'Power BI',
+      'Tableau',
+      'EDA',
+    ],
+  },
+  {
+    icon: <TestTube size={24} />,
+    title: 'Mathematics & Statistics',
+    color: 'border-amber-500',
+    skills: [
+      'Probability & Statistics',
+      'Linear Algebra',
+      'Calculus',
+      'Gradient Descent',
+      'Hypothesis Testing',
+      'Regression Analysis',
+      'A/B Testing',
+    ],
+  },
+  {
+    icon: <Cloud size={24} />,
+    title: 'AWS Cloud Services',
+    color: 'border-cyan-600',
+    skills: [
+      'Amazon SageMaker',
+      'AWS Lambda',
+      'AWS S3',
+      'Amazon Comprehend (NLP)',
+      'Amazon Rekognition (CV)',
+      'Amazon Forecast (Time Series)',
+      'AWS Step Functions',
+      'AWS Glue',
+    ],
+  },
+  {
+    icon: <Database size={24} />,
+    title: 'Databases',
+    color: 'border-green-600',
+    skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'AWS RDS', 'SQLite'],
+  },
+  {
+    icon: <Wrench size={24} />,
+    title: 'Tools & Frameworks',
+    color: 'border-gray-600',
+    skills: [
+      'TensorFlow',
+      'PyTorch',
+      'Keras',
+      'Jupyter Notebooks',
+      'Git & GitHub',
+      'Docker',
+      'MLflow',
+      'VS Code',
+      'Postman',
+    ],
+  },
+];
+
 
   const ref = useRef(null);
   useInView(ref, { once: true, margin: '-100px' });
@@ -169,8 +165,7 @@ const SkillsSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            My technical toolkit encompasses a wide range of software engineering and data science skills,
-            from application development to machine learning, DevOps, and cloud solutions.
+            My technical toolkit blends machine learning, data science, and cloud engineering with AWS — enabling smart, scalable AI solutions.
           </p>
         </div>
 
