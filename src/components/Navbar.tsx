@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                href="https://drive.google.com/file/d/1O1YJrF7qS6ON020yCOg14iUT27MQRM7g/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ZUVrC732dBEBznuF2MHy8_OCQdwx9Ipc/view?usp=sharing"
                 
                 className="flex items-center gap-1 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-200"
               >
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="https://drive.google.com/file/d/1bTRc1UOS4eI1Ca7lehDV0S89SzR7zhRD/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ZUVrC732dBEBznuF2MHy8_OCQdwx9Ipc/view?usp=sharing"
             className="flex items-center gap-1 px-3 py-2 text-base font-medium text-indigo-600"
             onClick={() => setIsOpen(false)}
           >
