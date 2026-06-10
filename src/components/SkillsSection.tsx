@@ -6,12 +6,12 @@ import type { LucideIcon } from 'lucide-react'
 interface Group { Icon: LucideIcon; title: string; items: string[] }
 
 const GROUPS: Group[] = [
-  { Icon: Brain, title: 'ML & GenAI', items: ['LLMs — GPT, Claude, Llama', 'RAG Pipelines', 'LangChain · LangGraph · AutoGen', 'Fine-tuning & Instruction Tuning', 'Prompt Engineering', 'Embeddings & Vector Databases', 'Semantic Search'] },
-  { Icon: Cpu, title: 'Frameworks & MLOps', items: ['TensorFlow · PyTorch', 'Scikit-learn · XGBoost', 'MLflow · Kubeflow', 'TensorRT · ONNX Runtime', 'FastAPI', 'Docker · Kubernetes', 'CI/CD Pipelines'] },
-  { Icon: Cloud, title: 'Cloud Platforms', items: ['AWS SageMaker', 'AWS S3 · Lambda · Bedrock', 'GCP AI Platform · BigQuery', 'Azure ML'] },
-  { Icon: Code2, title: 'Programming', items: ['Python', 'SQL', 'REST APIs'] },
-  { Icon: Database, title: 'Data Engineering', items: ['Pandas · NumPy', 'Apache Spark', 'Apache Kafka', 'PostgreSQL · MySQL', 'MongoDB · Redis'] },
-  { Icon: Wrench, title: 'Dev & Tools', items: ['Git · GitHub · GitLab', 'Agile / SDLC', 'Apache Airflow', 'Jupyter Notebook'] },
+  { Icon: Brain, title: 'ML & GenAI', items: ['LLMs — GPT, Claude, Llama', 'RAG Pipelines', 'LangChain · LangGraph · LlamaIndex', 'Multi-Agent AI (AutoGen, CrewAI)', 'Fine-tuning & Instruction Tuning', 'Prompt Engineering', 'Embeddings & Vector Databases', 'Semantic & Intent Search'] },
+  { Icon: Cpu, title: 'Frameworks & MLOps', items: ['TensorFlow · PyTorch', 'Scikit-learn · XGBoost', 'MLflow · Kubeflow', 'Hugging Face Transformers', 'FastAPI', 'Docker · Kubernetes', 'CI/CD Pipelines', 'Model Monitoring & Drift Detection'] },
+  { Icon: Cloud, title: 'Cloud Platforms', items: ['AWS (S3, EC2, Lambda, SageMaker)', 'AWS Bedrock', 'GCP AI Platform · BigQuery', 'Azure ML', 'Snowflake'] },
+  { Icon: Code2, title: 'Programming', items: ['Python', 'Go (Golang)', 'SQL', 'REST APIs', 'Microservices', 'Distributed Systems'] },
+  { Icon: Database, title: 'Data Engineering', items: ['Pandas · NumPy', 'Apache Spark (PySpark)', 'Apache Kafka', 'Apache Airflow', 'PostgreSQL · MySQL', 'MongoDB · Redis', 'ETL / ELT Pipelines'] },
+  { Icon: Wrench, title: 'Analytics & Tools', items: ['Power BI · Tableau', 'Statistical Modeling', 'A/B Testing · Causal Inference', 'SPSS · SAS', 'Git · GitHub · GitLab', 'Jupyter Notebook', 'Agile / SDLC'] },
 ]
 
 const SkillCard: React.FC<Group & { index: number }> = ({ Icon, title, items, index }) => {

@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="https://drive.google.com/file/d/1_Tycim9kP9y9hWOyt7HwEQqfP9i_bzw0/view?usp=sharing"
+            href="https://drive.google.com/file/d/1tiLK02TZJR1XUN_jWwMpPX4FxJYc2I22/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-navy-600 text-white text-sm
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
                 </a>
               ))}
               <a
-                href="https://drive.google.com/file/d/1_Tycim9kP9y9hWOyt7HwEQqfP9i_bzw0/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tiLK02TZJR1XUN_jWwMpPX4FxJYc2I22/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-navy-600 font-semibold mt-2"

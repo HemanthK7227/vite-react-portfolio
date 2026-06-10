@@ -25,17 +25,17 @@ const ContactSection: React.FC = () => {
             </h2>
 
             <a
-              href="mailto:itshemanthkothapalli@gmail.com"
+              href="mailto:hemanthkumar6x@gmail.com"
               className="inline-flex items-center rounded-2xl bg-[#f3f1ee] text-[#111]
                          px-8 py-5 text-xl md:text-2xl font-medium
                          hover:scale-[1.02] transition-transform duration-200"
             >
-              itshemanthkothapalli@gmail.com
+              hemanthkumar6x@gmail.com
             </a>
 
             <div className="mt-8">
               <a
-                href="https://drive.google.com/file/d/1_Tycim9kP9y9hWOyt7HwEQqfP9i_bzw0/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tiLK02TZJR1XUN_jWwMpPX4FxJYc2I22/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 text-white/90 text-xl md:text-2xl
@@ -56,13 +56,23 @@ const ContactSection: React.FC = () => {
           >
             <div className="flex items-center gap-8 md:gap-10 text-white">
               <a
-                href="https://www.linkedin.com/in/your-linkedin"
+                href="https://www.linkedin.com/in/hemanth-k-027457190/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={34} strokeWidth={2} />
+              </a>
+
+              <a
+                href="https://github.com/HemanthK7227"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[34px] font-semibold leading-none hover:opacity-70 transition-opacity"
+                aria-label="GitHub"
+              >
+                GH
               </a>
 
               <a
@@ -76,16 +86,6 @@ const ContactSection: React.FC = () => {
               </a>
 
               <a
-                href="https://www.behance.net/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[34px] font-semibold leading-none hover:opacity-70 transition-opacity"
-                aria-label="Behance"
-              >
-                Be
-              </a>
-
-              <a
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,7 +96,7 @@ const ContactSection: React.FC = () => {
               </a>
 
               <a
-                href="https://yourportfolio.com"
+                href="https://www.hemanthkothapalli.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity"

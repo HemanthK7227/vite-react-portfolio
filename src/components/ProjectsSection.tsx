@@ -14,30 +14,57 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     number: '01',
-    title: 'Equity Research LLM Assistant',
-    subtitleTags: ['Generative AI', 'RAG', 'LLMs'],
+    title: 'Multi-Agent RAG Research System',
+    subtitleTags: ['Generative AI', 'RAG', 'LangGraph'],
     description:
-      'End-to-end Retrieval-Augmented Generation platform enabling analysts to query real-time financial news using natural language. Built to support citation-backed, decision-ready insights for research workflows.',
-    stack: ['LangChain', 'FAISS', 'OpenAI GPT', 'RAG', 'Streamlit', 'Vector Databases', 'Python'],
-    link: 'https://github.com/',
+      'Built a multi-agent retrieval and QA pipeline with LangGraph, FastAPI, FAISS, and Tavily search to deliver validated, citation-aware answers from enterprise content.',
+    stack: ['LangGraph', 'FastAPI', 'FAISS', 'Tavily', 'Python', 'RAG', 'LLMs'],
+    link: 'https://github.com/HemanthK7227/multi-agent-rag-langgraph',
   },
   {
     number: '02',
-    title: 'Recommendation & Retention System',
-    subtitleTags: ['Machine Learning', 'E-Commerce'],
+    title: 'E-Commerce RAG Recommender',
+    subtitleTags: ['Recommendation', 'RAG', 'E-commerce'],
     description:
-      'Built recommendation and retention workflows using collaborative filtering and behavioral analytics. Designed production-ready ML pipelines for personalized suggestions and retention-focused modeling.',
-    stack: ['XGBoost', 'Scikit-learn', 'Collaborative Filtering', 'A/B Testing', 'Pandas', 'Python'],
-    link: 'https://github.com/',
+      'Designed an RAG-powered product recommender for e-commerce search, improving relevance by combining retrieval with generative ranking and contextual product insights.',
+    stack: ['Python', 'RAG', 'LLMs', 'Vector Search', 'FastAPI', 'E-commerce'],
+    link: 'https://github.com/HemanthK7227/ecom-rag-recommender',
   },
   {
     number: '03',
-    title: 'Production ML Platform — Cigna',
-    subtitleTags: ['MLOps', 'Healthcare', 'GenAI'],
+    title: 'Healthcare RAG QA Assistant',
+    subtitleTags: ['Healthcare', 'RAG', 'QA'],
     description:
-      'Built and deployed production ML and LLM-powered workflows with scalable pipelines, model serving, and cloud-based deployment patterns for enterprise AI applications.',
-    stack: ['AWS', 'MLflow', 'FastAPI', 'Docker', 'Kubernetes', 'LLMs', 'Python'],
-    link: 'https://github.com/',
+      'Created a healthcare question-answering assistant that retrieves clinical knowledge and generates concise responses from medical documents using retrieval-augmented generation.',
+    stack: ['Python', 'RAG', 'LLMs', 'FastAPI', 'Healthcare', 'NLP'],
+    link: 'https://github.com/HemanthK7227/healthcare-rag-qa',
+  },
+  {
+    number: '04',
+    title: 'Stock Market Analysis & Prediction',
+    subtitleTags: ['Finance', 'Time Series', 'ML'],
+    description:
+      'Developed stock forecasting models using sequence learning and technical indicators to predict market behavior and generate actionable investment insights.',
+    stack: ['Python', 'TensorFlow', 'LSTM', 'Pandas', 'Time Series'],
+    link: 'https://github.com/HemanthK7227/Stock-Market-Analysis-and-Prediction',
+  },
+  {
+    number: '05',
+    title: 'Supply Chain Optimization',
+    subtitleTags: ['Logistics', 'Optimization', 'Analytics'],
+    description:
+      'Optimized shipment pricing and supply chain routing through analytics-driven modeling, reducing costs and improving operational efficiency across transportation networks.',
+    stack: ['Python', 'Optimization', 'Logistics', 'Data Analysis', 'Machine Learning'],
+    link: 'https://github.com/HemanthK7227/Optimizing-Supply-Chain-Using-Shipment-Pricing-Data',
+  },
+  {
+    number: '06',
+    title: 'Traffic Accident Analysis & ML',
+    subtitleTags: ['Safety', 'ML', 'Data Science'],
+    description:
+      'Conducted traffic accident analytics and built predictive models to identify high-risk conditions and support safer road planning and response strategies.',
+    stack: ['Python', 'Scikit-learn', 'Data Analysis', 'Visualization', 'Machine Learning'],
+    link: 'https://github.com/HemanthK7227/Traffic-Accidents-Analysis-and-ML',
   },
 ]
 

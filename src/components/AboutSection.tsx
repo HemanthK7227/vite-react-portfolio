@@ -1,48 +1,49 @@
-import React, { useRef, useEffect } from 'react'
+import React, { FC, useRef, useEffect } from 'react'
 import { Calendar } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-const JOBS = [
+type Job = {
+  company: string
+  location: string
+  role: string
+  period: string
+  current: boolean
+  bullets: string[]
+}
+
+const JOBS: Job[] = [
   {
-    company: 'Cigna Healthcare', location: 'USA', role: 'Machine Learning Engineer',
-    period: 'March 2025 – Present', current: true,
+    company: 'BNY', location: 'USA', role: 'Machine Learning Engineer',
+    period: 'August 2024 – Present', current: true,
     bullets: [
-      'Built and deployed LLM-powered applications using RAG pipelines with LangChain and vector databases across enterprise systems.',
-      'Developed production-grade ML services using FastAPI deployed on AWS (S3, Lambda, SageMaker) — 99.9% system availability.',
-      'Implemented MLOps pipelines using MLflow for experiment tracking, model versioning, and automated retraining.',
-      'Optimized model inference using ONNX Runtime and TensorRT for real-time AI applications.',
+      'Developed RAG-based LLM applications using LangChain, FAISS, and Python to enable intelligent search across 50K+ enterprise documents.',
+      'Built multi-agent AI workflows for query orchestration and validation, improving response accuracy and reducing hallucinations.',
+      'Developed FastAPI-based inference services for deploying ML/LLM models, supporting 1,000+ daily requests with low-latency performance.',
+      'Implemented MLOps workflows with MLflow, CI/CD, and model monitoring, reducing deployment and experimentation cycles by 30%.',
+      'Optimized LLM performance through prompt engineering and retrieval tuning, reducing response latency by 40%.',
     ],
   },
   {
-    company: 'Lenskart', location: 'India', role: 'Data Scientist',
-    period: 'January 2020 – July 2023', current: false,
+    company: 'Abbott', location: 'India', role: 'Data Scientist',
+    period: 'February 2020 – July 2023', current: false,
     bullets: [
-      'Developed ML models using Scikit-learn and XGBoost for customer retention and demand forecasting.',
-      'Built recommendation systems using collaborative filtering, increasing engagement across 100K+ users.',
-      'Conducted A/B testing and statistical analysis for measurable improvements in business strategy.',
-      'Designed end-to-end ML pipelines improving workflow efficiency through automation.',
+      'Developed predictive models using Python and Scikit-learn to forecast patient trends and product demand, reducing excess inventory by 15%.',
+      'Performed statistical analysis and hypothesis testing to identify key drivers of patient and operational outcomes.',
+      'Designed and executed A/B tests for pricing and marketing initiatives, improving conversion rates and forecasting accuracy by 12%.',
+      'Built scalable data pipelines and automated data validation using Python, SQL, and Snowflake, reducing data discrepancies by 40%.',
     ],
   },
   {
-    company: 'Mercer University', location: 'USA', role: 'Learning Technology Assistant',
-    period: 'September 2023 – December 2024', current: false,
+    company: 'Mercer University', location: 'USA', role: 'Graduate — MS Business Analytics',
+    period: 'August 2023 – December 2024', current: false,
     bullets: [
-      'Maintained and organized 500+ academic records, improving data accuracy across internal systems.',
-      'Coordinated with 10+ faculty members to ensure timely availability of all course resources.',
-    ],
-  },
-  {
-    company: 'EPAM Systems', location: 'India', role: 'Junior Software Engineer',
-    period: 'April 2018 – December 2019', current: false,
-    bullets: [
-      'Developed backend services and REST APIs handling thousands of daily user requests.',
-      'Built data processing pipelines and automation scripts, reducing manual effort significantly.',
-      'Collaborated with cross-functional teams to design scalable architectures.',
+      'Master of Science in Business Analytics with focus on ML, statistical modeling, and data-driven decision making.',
+      'Coordinated with faculty and maintained academic data systems supporting research and course delivery.',
     ],
   },
 ]
 
-const ExpCard: React.FC<typeof JOBS[0] & { index: number }> = ({ company, location, role, period, current, bullets, index }) => {
+const ExpCard: FC<Job & { index: number }> = ({ company, location, role, period, current, bullets, index }) => {
   const cardRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -67,7 +68,7 @@ const ExpCard: React.FC<typeof JOBS[0] & { index: number }> = ({ company, locati
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
-      className={`relative bg-white border-2 rounded-xl p-6 transition-all duration-300
+      className={`relative group bg-white border-2 rounded-xl p-6 transition-all duration-300
                   hover:-translate-y-1 hover:shadow-lg overflow-hidden
                   ${current ? 'border-navy-600' : 'border-slate-100 hover:border-blue-200'}`}
     >

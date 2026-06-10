@@ -37,27 +37,27 @@ const HeroSection: React.FC = () => {
 
             <div className="mt-10 space-y-7 text-white/82 text-[19px] leading-[1.75] max-w-xl">
               <p>
-                I’m a Machine Learning Engineer with over 4+ years of experience
+                I'm a Machine Learning Engineer with 5+ years of experience
                 building scalable AI systems and production-grade ML workflows.
-                I focus on Generative AI, LLM applications, and high-performance inference.
+                I focus on Generative AI, LLM applications, RAG architectures, and MLOps.
               </p>
 
               <p>
-                All things AI: LLMs. RAG. MLOps. Real-time inference.
+                All things AI: LLMs. RAG. Multi-agent systems. MLOps. Real-time inference.
                 Yep, I build them all.
               </p>
 
               <p>
-                Let’s build intelligent systems that are not just functional,
+                Let's build intelligent systems that are not just functional,
                 but impactful, scalable, and production-ready.
               </p>
             </div>
 
             <div className="mt-10 flex items-center gap-5 text-white/90">
-              <span className="text-[15px] text-white/88">Let’s connect</span>
+              <span className="text-[15px] text-white/88">Let's connect</span>
 
               <a
-                href="https://www.linkedin.com/in/your-linkedin"
+                href="https://www.linkedin.com/in/hemanth-k-027457190/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -89,7 +89,7 @@ const HeroSection: React.FC = () => {
 
             <div className="mt-12 flex flex-wrap gap-4">
               <a
-                href="https://drive.google.com/file/d/1_Tycim9kP9y9hWOyt7HwEQqfP9i_bzw0/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tiLK02TZJR1XUN_jWwMpPX4FxJYc2I22/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4
@@ -101,12 +101,12 @@ const HeroSection: React.FC = () => {
               </a>
 
               <a
-                href="mailto:itshemanthkothapalli@gmail.com"
+                href="mailto:hemanthkumar6x@gmail.com"
                 className="inline-flex items-center rounded-full bg-white/95 px-7 py-4
                            text-[17px] font-medium text-[#111] hover:scale-[1.02]
                            transition-transform duration-200"
               >
-                itshemanthkothapalli@gmail.com
+                hemanthkumar6x@gmail.com
               </a>
             </div>
           </motion.div>
