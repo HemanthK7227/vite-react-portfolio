@@ -1,129 +1,259 @@
 import React from 'react'
-import { Linkedin, Instagram, Youtube, FileText } from 'lucide-react'
+import { Linkedin, FileText, ArrowRight, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 import profileImg from '../assets/profile.png'
 
+const STATS = [
+  { value: '5+', label: 'Years of Experience' },
+  { value: '6+', label: 'AI / ML Projects' },
+  { value: '2', label: 'Top Companies' },
+]
+
+/* Inline GitHub SVG so we don't depend on a specific lucide version */
+const GithubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+             0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+             -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+             .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+             -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115
+             2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595
+             1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012
+             2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+  </svg>
+)
+
 const HeroSection: React.FC = () => {
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen overflow-hidden bg-[#0b0f19] text-white"
-    >
-      <div
-        className="absolute inset-0 opacity-[0.18] pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(rgba(255,255,255,0.22) 1.2px, transparent 1.2px)',
-          backgroundSize: '74px 74px',
-          backgroundPosition: '0 0',
-        }}
-      />
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-[#06090F] text-white">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-20 lg:pt-32 lg:pb-24">
-        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center">
+      {/* Background gradient orbs */}
+      <div className="absolute -top-40 -left-32 w-[700px] h-[700px] rounded-full pointer-events-none"
+           style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%)' }} />
+      <div className="absolute top-1/4 -right-40 w-[600px] h-[600px] rounded-full pointer-events-none"
+           style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.13) 0%, transparent 70%)' }} />
+      <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full pointer-events-none"
+           style={{ background: 'radial-gradient(ellipse, rgba(56,189,248,0.08) 0%, transparent 70%)' }} />
+
+      {/* Dot grid overlay */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.13] dot-grid" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-28 pb-20 lg:pt-36 lg:pb-28">
+        <div className="grid lg:grid-cols-[1fr_460px] gap-16 lg:gap-20 items-center">
+
+          {/* ─── Left: Content ─── */}
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl"
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1
-              className="font-semibold tracking-tight text-white"
-              style={{ fontSize: 'clamp(52px, 8vw, 86px)', lineHeight: 0.98 }}
-            >
-              Hello,
-              <br />
-              Hemanth here! 👋
+            {/* Availability badge */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full mb-8
+                            bg-white/[0.04] border border-white/[0.07] backdrop-blur-sm">
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+              </span>
+              <span className="text-[13px] text-white/65 font-medium">Available for new opportunities</span>
+            </div>
+
+            {/* Main heading */}
+            <h1 className="font-extrabold tracking-tight" style={{ fontSize: 'clamp(50px, 8vw, 92px)', lineHeight: 0.93 }}>
+              <span className="block text-white">Hemanth</span>
+              <span className="block text-white">Kumar</span>
+              <span className="block mt-1" style={{
+                background: 'linear-gradient(125deg, #818CF8 0%, #A78BFA 40%, #67E8F9 100%)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}>
+                ML Engineer
+              </span>
             </h1>
 
-            <div className="mt-10 space-y-7 text-white/82 text-[19px] leading-[1.75] max-w-xl">
-              <p>
-                I'm a Machine Learning Engineer with 5+ years of experience
-                building scalable AI systems and production-grade ML workflows.
-                I focus on Generative AI, LLM applications, RAG architectures, and MLOps.
-              </p>
+            {/* Sub-description */}
+            <p className="mt-8 text-[17px] leading-[1.85] text-white/50 max-w-[520px]">
+              Building production-grade{' '}
+              <span className="text-white/85 font-medium">AI systems</span>,{' '}
+              <span className="text-white/85 font-medium">LLM applications</span>, and{' '}
+              <span className="text-white/85 font-medium">RAG architectures</span> at scale.
+              Currently shipping intelligent search at{' '}
+              <span className="font-semibold" style={{
+                background: 'linear-gradient(135deg, #818CF8, #A78BFA)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}>BNY</span>.
+            </p>
 
-              <p>
-                All things AI: LLMs. RAG. Multi-agent systems. MLOps. Real-time inference.
-                Yep, I build them all.
-              </p>
-
-              <p>
-                Let's build intelligent systems that are not just functional,
-                but impactful, scalable, and production-ready.
-              </p>
-            </div>
-
-            <div className="mt-10 flex items-center gap-5 text-white/90">
-              <span className="text-[15px] text-white/88">Let's connect</span>
-
+            {/* CTA row */}
+            <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="https://www.linkedin.com/in/hemanth-k-027457190/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="hover:text-white transition-colors"
+                href="#work"
+                className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full
+                           text-white text-[16px] font-semibold
+                           hover:-translate-y-0.5 transition-all duration-200
+                           shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/40"
+                style={{ background: 'linear-gradient(135deg, #6366F1, #7C3AED)' }}
               >
-                <Linkedin size={24} strokeWidth={2} />
+                View My Work
+                <ArrowRight size={16} strokeWidth={2.5} />
               </a>
-
               <a
-                href="https://www.youtube.com/"
+                href="https://drive.google.com/file/d/1mU8jNaOugZsOVT-htM-FDCRRhSM1iv-W/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="hover:text-white transition-colors"
+                className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full
+                           bg-white/[0.05] border border-white/[0.10] text-white text-[16px] font-medium
+                           hover:bg-white/[0.09] hover:border-white/[0.18]
+                           hover:-translate-y-0.5 transition-all duration-200"
               >
-                <Youtube size={24} strokeWidth={2} />
-              </a>
-
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="hover:text-white transition-colors"
-              >
-                <Instagram size={24} strokeWidth={2} />
-              </a>
-            </div>
-
-            <div className="mt-12 flex flex-wrap gap-4">
-              <a
-                href="https://drive.google.com/file/d/1tiLK02TZJR1XUN_jWwMpPX4FxJYc2I22/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4
-                           text-[17px] font-medium text-[#111] hover:scale-[1.02]
-                           transition-transform duration-200"
-              >
-                <FileText size={18} strokeWidth={2} />
+                <FileText size={16} />
                 Resume
               </a>
+            </div>
 
-              <a
-                href="mailto:hemanthkumar6x@gmail.com"
-                className="inline-flex items-center rounded-full bg-white/95 px-7 py-4
-                           text-[17px] font-medium text-[#111] hover:scale-[1.02]
-                           transition-transform duration-200"
-              >
-                hemanthkumar6x@gmail.com
-              </a>
+            {/* Social links */}
+            <div className="mt-10 flex items-center gap-4">
+              <span className="text-[11px] font-bold text-white/25 tracking-[0.2em] uppercase">Connect</span>
+              <div className="h-px w-8 bg-white/10" />
+              {[
+                {
+                  href: 'https://www.linkedin.com/in/hemanth-k-027457190/',
+                  label: 'LinkedIn',
+                  node: <Linkedin size={17} strokeWidth={1.8} />,
+                },
+                {
+                  href: 'https://github.com/HemanthK7227',
+                  label: 'GitHub',
+                  node: <GithubIcon size={17} />,
+                },
+              ].map(({ href, label, node }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.08]
+                             flex items-center justify-center text-white/50
+                             hover:text-white hover:bg-white/[0.08] hover:border-white/20
+                             hover:scale-110 transition-all duration-200"
+                >
+                  {node}
+                </a>
+              ))}
+            </div>
+
+            {/* Stats row */}
+            <div className="mt-12 flex flex-wrap gap-10">
+              {STATS.map(({ value, label }, i) => (
+                <motion.div
+                  key={label}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <div
+                    className="text-[40px] font-black leading-none"
+                    style={{
+                      background: 'linear-gradient(135deg, #818CF8, #C4B5FD)',
+                      WebkitBackgroundClip: 'text',
+                      backgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                    }}
+                  >
+                    {value}
+                  </div>
+                  <div className="text-[12px] text-white/35 mt-1.5 font-medium tracking-wide">{label}</div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
+          {/* ─── Right: Profile photo ─── */}
           <motion.div
-            initial={{ opacity: 0, y: 28, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.08 }}
+            initial={{ opacity: 0, scale: 0.9, y: 28 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-[470px]">
-              <div className="absolute -inset-4 rounded-[36px] bg-white/5 blur-2xl" />
+            <div className="relative w-full max-w-[420px]">
+
+              {/* Outer glow halo */}
+              <div
+                className="absolute -inset-6 rounded-[48px] pointer-events-none"
+                style={{
+                  background: 'conic-gradient(from 45deg, #6366F1, #A855F7, #38BDF8, #6366F1)',
+                  opacity: 0.22,
+                  filter: 'blur(32px)',
+                }}
+              />
+
+              {/* Gradient border ring */}
+              <div
+                className="absolute -inset-[1.5px] rounded-[36px] pointer-events-none"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(99,102,241,0.6), rgba(168,85,247,0.3), rgba(56,189,248,0.2))',
+                  opacity: 0.5,
+                }}
+              />
+
+              {/* Photo */}
               <img
                 src={profileImg}
                 alt="Hemanth Kumar"
-                className="relative w-full h-[540px] md:h-[620px] object-cover rounded-[34px] shadow-[0_20px_80px_rgba(0,0,0,0.35)]"
+                className="relative w-full h-[520px] md:h-[600px] object-cover rounded-[34px]
+                           shadow-[0_32px_80px_rgba(0,0,0,0.6)]"
+                style={{ zIndex: 1, position: 'relative' }}
               />
+
+              {/* Bottom fade */}
+              <div
+                className="absolute bottom-0 inset-x-0 h-28 rounded-b-[34px] pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to bottom, transparent, rgba(6,9,15,0.55))',
+                  zIndex: 2,
+                }}
+              />
+
+              {/* Floating badge — top right */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -right-5 top-10 flex items-center gap-2 px-3.5 py-2.5
+                           bg-[#0D1321]/95 border border-indigo-500/25 rounded-2xl
+                           shadow-[0_8px_32px_rgba(99,102,241,0.18)] backdrop-blur-sm"
+                style={{ zIndex: 10 }}
+              >
+                <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0"
+                     style={{ background: 'linear-gradient(135deg, #6366F1, #A855F7)' }}>
+                  <Zap size={12} className="text-white" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold text-white leading-none">Generative AI</div>
+                  <div className="text-[10px] text-white/40 mt-0.5">LLMs · RAG · Agents</div>
+                </div>
+              </motion.div>
+
+              {/* Floating badge — bottom left */}
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.7 }}
+                className="absolute -left-5 bottom-16 flex items-center gap-2 px-3.5 py-2.5
+                           bg-[#0D1321]/95 border border-violet-500/25 rounded-2xl
+                           shadow-[0_8px_32px_rgba(168,85,247,0.15)] backdrop-blur-sm"
+                style={{ zIndex: 10 }}
+              >
+                <span className="relative flex h-2.5 w-2.5 shrink-0">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+                </span>
+                <div>
+                  <div className="text-[11px] font-bold text-white leading-none">Open to Work</div>
+                  <div className="text-[10px] text-white/40 mt-0.5">ML / AI Engineering</div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

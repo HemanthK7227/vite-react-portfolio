@@ -16,32 +16,34 @@ export default {
           400: '#3b82f6',
           300: '#60a5fa',
         },
+        brand: {
+          950: '#03060D',
+          900: '#06090F',
+          800: '#0A0F1C',
+          700: '#0D1321',
+          600: '#111927',
+        },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'float-slow': 'float 9s ease-in-out infinite',
         'float-fast': 'float 4s ease-in-out infinite',
         'pulse-dot': 'pulseDot 2s ease-in-out infinite',
-        'ring': 'ringPulse 4s ease-in-out infinite',
-        'wave': 'wave 4s linear infinite',
         'fade-up': 'fadeUp 0.6s ease both',
+        'spin-slow': 'spin 12s linear infinite',
+        'ping-slow': 'ping 3s ease-in-out infinite',
       },
       keyframes: {
         float: {
           '0%,100%': { transform: 'translateY(0) scale(1)' },
-          '50%': { transform: 'translateY(-16px) scale(1.03)' },
+          '50%': { transform: 'translateY(-14px) scale(1.02)' },
         },
         pulseDot: {
           '0%,100%': { opacity: '1', transform: 'scale(1)' },
           '50%': { opacity: '0.3', transform: 'scale(0.75)' },
-        },
-        ringPulse: {
-          '0%,100%': { transform: 'scale(1)', opacity: '0.6' },
-          '50%': { transform: 'scale(1.15)', opacity: '0.15' },
-        },
-        wave: {
-          'from': { left: '-100%' },
-          'to': { left: '100%' },
         },
         fadeUp: {
           'from': { opacity: '0', transform: 'translateY(20px)' },

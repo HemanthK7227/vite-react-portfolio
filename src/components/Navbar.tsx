@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, FileText } from 'lucide-react'
+import { Menu, X, FileText, ArrowUpRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const LINKS = [
-  { label: 'My Work', href: '#work' },
+  { label: 'Work', href: '#work' },
   { label: 'Experience', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
@@ -14,86 +14,130 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 24)
+    const fn = () => setScrolled(window.scrollY > 30)
     window.addEventListener('scroll', fn, { passive: true })
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
   return (
     <motion.header
-      initial={{ y: -50, opacity: 0 }}
+      initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm'
-          : 'bg-white/80 backdrop-blur-sm border-b border-slate-100'
+          ? 'bg-[#06090F]/92 backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_0_60px_rgba(0,0,0,0.5)]'
+          : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
-        <a href="#hero" className="text-lg font-extrabold text-navy-800 tracking-tight">
-          Hemanth<span className="text-navy-600">.</span>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[72px]">
+
+        {/* Logo */}
+        <a href="#hero" className="group flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[13px] font-black text-white"
+               style={{ background: 'linear-gradient(135deg, #6366F1, #A855F7)' }}>
+            HK
+          </div>
+          <span className="text-[16px] font-bold text-white tracking-tight">
+            Hemanth<span className="text-indigo-400">.</span>
+          </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center">
           {LINKS.map(l => (
             <a
               key={l.label}
               href={l.href}
-              className="text-sm text-slate-500 hover:text-navy-600 transition-colors font-medium tracking-wide"
+              className="relative px-4 py-2 text-[14px] text-white/50 hover:text-white
+                         transition-colors duration-200 font-medium tracking-wide group"
             >
               {l.label}
+              <span className="absolute bottom-0.5 left-4 right-4 h-px
+                               bg-gradient-to-r from-indigo-500 to-violet-500
+                               scale-x-0 group-hover:scale-x-100
+                               transition-transform duration-300 origin-center" />
             </a>
           ))}
-          <a
-            href="https://drive.google.com/file/d/1tiLK02TZJR1XUN_jWwMpPX4FxJYc2I22/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-navy-600 text-white text-sm
-                       px-5 py-2 rounded-lg font-semibold hover:bg-navy-700
-                       transition-all hover:-translate-y-0.5 shadow-sm hover:shadow-md"
-          >
-            <FileText size={13} /> Resume
-          </a>
         </nav>
 
+        {/* Desktop CTA buttons */}
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="https://drive.google.com/file/d/1mU8jNaOugZsOVT-htM-FDCRRhSM1iv-W/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full
+                       bg-white/[0.05] border border-white/[0.08] text-white/70 text-[13px] font-medium
+                       hover:bg-white/[0.08] hover:text-white hover:border-white/15
+                       transition-all duration-200"
+          >
+            <FileText size={13} />
+            Resume
+          </a>
+          <a
+            href="mailto:hemanthkumar6x@gmail.com"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full
+                       text-white text-[13px] font-semibold
+                       hover:-translate-y-px transition-all duration-200
+                       shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/35"
+            style={{ background: 'linear-gradient(135deg, #6366F1, #7C3AED)' }}
+          >
+            Hire me
+            <ArrowUpRight size={13} strokeWidth={2.5} />
+          </a>
+        </div>
+
+        {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(v => !v)}
-          className="md:hidden text-slate-500 hover:text-navy-600 transition-colors p-1"
+          className="md:hidden text-white/60 hover:text-white transition-colors p-2 -mr-2"
           aria-label="Toggle menu"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden bg-white border-b border-slate-100 overflow-hidden"
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden bg-[#06090F]/98 backdrop-blur-xl border-b border-white/[0.06] overflow-hidden"
           >
-            <nav className="flex flex-col gap-1 px-6 py-5">
+            <nav className="flex flex-col px-6 py-4">
               {LINKS.map(l => (
                 <a
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-slate-500 hover:text-navy-600 py-2.5 font-medium tracking-wide transition-colors"
+                  className="text-[15px] text-white/55 hover:text-white py-3.5 font-medium
+                             transition-colors border-b border-white/[0.04] last:border-0"
                 >
                   {l.label}
                 </a>
               ))}
-              <a
-                href="https://drive.google.com/file/d/1tiLK02TZJR1XUN_jWwMpPX4FxJYc2I22/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-navy-600 font-semibold mt-2"
-              >
-                <FileText size={13} /> Resume
-              </a>
+              <div className="flex gap-3 pt-5 pb-2">
+                <a
+                  href="https://drive.google.com/file/d/1mU8jNaOugZsOVT-htM-FDCRRhSM1iv-W/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center py-3 rounded-full bg-white/[0.06] border border-white/10
+                             text-white/80 text-[14px] font-medium"
+                >
+                  Resume
+                </a>
+                <a
+                  href="mailto:hemanthkumar6x@gmail.com"
+                  className="flex-1 text-center py-3 rounded-full text-white text-[14px] font-semibold"
+                  style={{ background: 'linear-gradient(135deg, #6366F1, #7C3AED)' }}
+                >
+                  Hire me
+                </a>
+              </div>
             </nav>
           </motion.div>
         )}
