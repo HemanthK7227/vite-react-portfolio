@@ -35,11 +35,11 @@ const SOCIALS = [
 ]
 
 const ContactSection: React.FC = () => (
-  <section id="contact" className="relative bg-[#06090F] overflow-hidden" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+  <section id="contact" className="relative bg-[#0d0b09] overflow-hidden" style={{ borderTop: '1px solid rgba(214,167,102,0.12)' }}>
 
     {/* Background glow */}
     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
-         style={{ background: 'radial-gradient(ellipse, rgba(99,102,241,0.12) 0%, transparent 70%)' }} />
+         style={{ background: 'radial-gradient(ellipse, rgba(214,167,102,0.12) 0%, transparent 70%)' }} />
 
     <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-28 lg:py-36">
 
@@ -51,7 +51,7 @@ const ContactSection: React.FC = () => (
         className="max-w-3xl"
       >
         {/* Eyebrow */}
-        <p className="text-[12px] font-bold tracking-[0.2em] uppercase text-indigo-400 mb-6">
+        <p className="text-[12px] font-bold tracking-[0.2em] uppercase text-[#d7a562] mb-6">
           Get In Touch
         </p>
 
@@ -63,7 +63,7 @@ const ContactSection: React.FC = () => (
           Let's build
           <br />
           <span style={{
-            background: 'linear-gradient(125deg, #818CF8 0%, #A78BFA 40%, #67E8F9 100%)',
+            background: 'linear-gradient(125deg, #f1d9af 0%, #d09d5d 45%, #b77748 100%)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -72,7 +72,7 @@ const ContactSection: React.FC = () => (
           </span>
         </h2>
 
-        <p className="text-[16px] md:text-[18px] text-white/40 leading-relaxed mb-12 max-w-lg">
+        <p className="text-[16px] md:text-[18px] text-[#d9d0c7]/70 leading-relaxed mb-12 max-w-lg">
           Open to ML engineering roles, AI consulting projects, and interesting collaborations.
           Let's make something great.
         </p>
@@ -84,7 +84,7 @@ const ContactSection: React.FC = () => (
                      text-white text-[16px] md:text-[18px] font-semibold
                      hover:-translate-y-0.5 hover:shadow-2xl transition-all duration-300
                      shadow-lg shadow-indigo-500/20"
-          style={{ background: 'linear-gradient(135deg, #6366F1, #7C3AED)' }}
+          style={{ background: 'linear-gradient(135deg, #e5c98b, #c98d55)' }}
         >
           <Mail size={20} strokeWidth={2} />
           hemanthkumar6x@gmail.com
@@ -97,8 +97,8 @@ const ContactSection: React.FC = () => (
             href="https://drive.google.com/file/d/1mU8jNaOugZsOVT-htM-FDCRRhSM1iv-W/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[15px] text-white/40
-                       hover:text-white/70 transition-colors duration-200 group"
+            className="inline-flex items-center gap-2 text-[15px] text-[#d1b68d]/75
+                       hover:text-white transition-colors duration-200 group"
           >
             <FileText size={16} />
             Download Resume
@@ -111,7 +111,7 @@ const ContactSection: React.FC = () => (
 
         {/* Social links */}
         <div className="flex items-center gap-4">
-          <span className="text-[11px] font-bold text-white/20 tracking-[0.2em] uppercase">Follow</span>
+          <span className="text-[11px] font-bold text-[#d1b68d]/80 tracking-[0.2em] uppercase">Follow</span>
           {SOCIALS.map(({ label, href, icon }) => (
             <a
               key={label}
@@ -119,11 +119,11 @@ const ContactSection: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="w-12 h-12 rounded-xl flex items-center justify-center text-white/40
+              className="w-12 h-12 rounded-xl flex items-center justify-center text-[#d8cab6]/70
                          hover:text-white hover:scale-110 transition-all duration-200"
               style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.07)',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(214,167,102,0.15)',
               }}
             >
               {icon}

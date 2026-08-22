@@ -5,7 +5,7 @@ import profileImg from '../assets/profile.png'
 
 const STATS = [
   { value: '5+', label: 'Years of Experience' },
-  { value: '6+', label: 'AI / ML Projects' },
+  { value: '10+', label: 'AI / ML Projects' },
   { value: '2', label: 'Top Companies' },
 ]
 
@@ -25,15 +25,15 @@ const GithubIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
 
 const HeroSection: React.FC = () => {
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden bg-[#06090F] text-white">
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-[#0b0908] text-[#f8f2ea]">
 
       {/* Background gradient orbs */}
       <div className="absolute -top-40 -left-32 w-[700px] h-[700px] rounded-full pointer-events-none"
-           style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%)' }} />
+           style={{ background: 'radial-gradient(circle, rgba(205,146,84,0.18) 0%, transparent 70%)' }} />
       <div className="absolute top-1/4 -right-40 w-[600px] h-[600px] rounded-full pointer-events-none"
-           style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.13) 0%, transparent 70%)' }} />
+           style={{ background: 'radial-gradient(circle, rgba(178,119,52,0.12) 0%, transparent 70%)' }} />
       <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[900px] h-[400px] rounded-full pointer-events-none"
-           style={{ background: 'radial-gradient(ellipse, rgba(56,189,248,0.08) 0%, transparent 70%)' }} />
+           style={{ background: 'radial-gradient(ellipse, rgba(255,214,153,0.07) 0%, transparent 70%)' }} />
 
       {/* Dot grid overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.13] dot-grid" />
@@ -54,32 +54,48 @@ const HeroSection: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
-              <span className="text-[13px] text-white/65 font-medium">Available for new opportunities</span>
+              <span className="text-[13px] text-[#f0e5d1]/80 font-medium">Available for new opportunities</span>
             </div>
 
             {/* Main heading */}
             <h1 className="font-extrabold tracking-tight" style={{ fontSize: 'clamp(50px, 8vw, 92px)', lineHeight: 0.93 }}>
-              <span className="block text-white">Hemanth</span>
-              <span className="block text-white">Kumar</span>
+              <span className="block text-[#f8f2ea]">Hemanth</span>
+              <span className="block text-[#f8f2ea]">Kumar</span>
               <span className="block mt-1" style={{
-                background: 'linear-gradient(125deg, #818CF8 0%, #A78BFA 40%, #67E8F9 100%)',
+                background: 'linear-gradient(125deg, #f1d9af 0%, #d09d5d 46%, #ba7645 100%)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}>
-                ML Engineer
+                AI / ML Engineer
               </span>
             </h1>
 
+            {/* Role tags */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {['LLM Engineer', 'AI Engineer', 'Data Scientist', 'Forward Deployed Engineer'].map(role => (
+                <span
+                  key={role}
+                  className="px-3 py-1 rounded-full text-[11px] font-semibold tracking-wide"
+                  style={{
+                    background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(209,156,88,0.2)',
+                    color: 'rgba(240,220,180,0.65)',
+                  }}
+                >
+                  {role}
+                </span>
+              ))}
+            </div>
+
             {/* Sub-description */}
-            <p className="mt-8 text-[17px] leading-[1.85] text-white/50 max-w-[520px]">
-              Building production-grade{' '}
-              <span className="text-white/85 font-medium">AI systems</span>,{' '}
-              <span className="text-white/85 font-medium">LLM applications</span>, and{' '}
-              <span className="text-white/85 font-medium">RAG architectures</span> at scale.
-              Currently shipping intelligent search at{' '}
+            <p className="mt-8 text-[17px] leading-[1.85] text-[#d9d0c7]/70 max-w-[520px]">
+              I turn{' '}
+              <span className="text-[#f7f2ea] font-medium">LLMs into production systems</span> —
+              RAG pipelines, multi-agent orchestration, and real-time inference at scale.
+              5+ years from raw data to deployed AI, currently engineering intelligent enterprise search at{' '}
               <span className="font-semibold" style={{
-                background: 'linear-gradient(135deg, #818CF8, #A78BFA)',
+                background: 'linear-gradient(135deg, #f1d9af, #d09d5d)',
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -94,7 +110,7 @@ const HeroSection: React.FC = () => {
                            text-white text-[16px] font-semibold
                            hover:-translate-y-0.5 transition-all duration-200
                            shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/40"
-                style={{ background: 'linear-gradient(135deg, #6366F1, #7C3AED)' }}
+                style={{ background: 'linear-gradient(135deg, #e5c98b, #c98d55)' }}
               >
                 View My Work
                 <ArrowRight size={16} strokeWidth={2.5} />
@@ -104,8 +120,8 @@ const HeroSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full
-                           bg-white/[0.05] border border-white/[0.10] text-white text-[16px] font-medium
-                           hover:bg-white/[0.09] hover:border-white/[0.18]
+                           bg-[#201b17]/75 border border-[#d7b07a]/25 text-[#f6efe7] text-[16px] font-medium
+                           hover:bg-[#2a221d] hover:border-[#d7b07a]/35
                            hover:-translate-y-0.5 transition-all duration-200"
               >
                 <FileText size={16} />
@@ -135,9 +151,9 @@ const HeroSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.08]
-                             flex items-center justify-center text-white/50
-                             hover:text-white hover:bg-white/[0.08] hover:border-white/20
+                  className="w-10 h-10 rounded-full bg-[#201b17]/80 border border-[#d7b07a]/15
+                             flex items-center justify-center text-[#d8cab6]/70
+                             hover:text-white hover:bg-[#2a221d] hover:border-[#d7b07a]/35
                              hover:scale-110 transition-all duration-200"
                 >
                   {node}
@@ -157,7 +173,7 @@ const HeroSection: React.FC = () => {
                   <div
                     className="text-[40px] font-black leading-none"
                     style={{
-                      background: 'linear-gradient(135deg, #818CF8, #C4B5FD)',
+                      background: 'linear-gradient(135deg, #f1d9af, #d09d5d)',
                       WebkitBackgroundClip: 'text',
                       backgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
@@ -251,7 +267,7 @@ const HeroSection: React.FC = () => {
                 </span>
                 <div>
                   <div className="text-[11px] font-bold text-white leading-none">Open to Work</div>
-                  <div className="text-[10px] text-white/40 mt-0.5">ML / AI Engineering</div>
+                  <div className="text-[10px] text-white/40 mt-0.5">AI / ML Engineering</div>
                 </div>
               </motion.div>
             </div>

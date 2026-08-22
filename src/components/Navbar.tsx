@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#06090F]/92 backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_0_60px_rgba(0,0,0,0.5)]'
+          ? 'bg-[#120f0d]/90 backdrop-blur-2xl border-b border-[#d7b07a]/15 shadow-[0_18px_50px_rgba(0,0,0,0.35)]'
           : 'bg-transparent'
       }`}
     >
@@ -34,12 +34,12 @@ const Navbar: React.FC = () => {
 
         {/* Logo */}
         <a href="#hero" className="group flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[13px] font-black text-white"
-               style={{ background: 'linear-gradient(135deg, #6366F1, #A855F7)' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[13px] font-black text-[#120f0d]"
+               style={{ background: 'linear-gradient(135deg, #f1d9af, #d09d5d)' }}>
             HK
           </div>
-          <span className="text-[16px] font-bold text-white tracking-tight">
-            Hemanth<span className="text-indigo-400">.</span>
+          <span className="text-[16px] font-bold text-[#f7f2ea] tracking-tight">
+            Hemanth<span className="text-[#d8a86b]">.</span>
           </span>
         </a>
 
@@ -49,12 +49,12 @@ const Navbar: React.FC = () => {
             <a
               key={l.label}
               href={l.href}
-              className="relative px-4 py-2 text-[14px] text-white/50 hover:text-white
+              className="relative px-4 py-2 text-[14px] text-[#d8cab6]/70 hover:text-[#fffaf5]
                          transition-colors duration-200 font-medium tracking-wide group"
             >
               {l.label}
               <span className="absolute bottom-0.5 left-4 right-4 h-px
-                               bg-gradient-to-r from-indigo-500 to-violet-500
+                               bg-gradient-to-r from-[#f1d9af] to-[#d09d5d]
                                scale-x-0 group-hover:scale-x-100
                                transition-transform duration-300 origin-center" />
             </a>
@@ -68,8 +68,8 @@ const Navbar: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full
-                       bg-white/[0.05] border border-white/[0.08] text-white/70 text-[13px] font-medium
-                       hover:bg-white/[0.08] hover:text-white hover:border-white/15
+                       bg-[#201b17]/80 border border-[#d7b07a]/20 text-[#f7f2ea]/80 text-[13px] font-medium
+                       hover:bg-[#2a221d] hover:text-white hover:border-[#d7b07a]/35
                        transition-all duration-200"
           >
             <FileText size={13} />
